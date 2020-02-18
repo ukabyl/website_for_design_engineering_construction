@@ -1,0 +1,421 @@
+@import "vars";
+
+@media screen and (max-width: 1200px) {
+	.header{
+
+	}
+	.line{
+		padding: .5rem 0;
+		&__logo{
+			width: 100px;
+		}
+		&__phone{
+			.phone{
+				font-size: 1rem;
+			}
+		}
+	}
+	.ds-menu{
+		display: none;
+	}
+
+	.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before{
+		background: #fff;
+		width: 30px;
+		height: 3px;
+	}
+	.hamburger-box{
+		width: 30px;
+	}
+	.hamburger{
+		padding-top: 0;
+		padding-bottom: 0;
+		padding-left: 2rem;
+		padding-right: 0;
+	}
+
+	.main{
+		text-align: center;
+		&__button{
+			max-width: 100%;
+			text-transform: uppercase;
+		}
+		&__title{
+			font-size: 1.4rem;
+			&-second{
+				font-size: 1.2rem;
+			}
+		}
+		&__button{
+			font-size: .7rem;
+		}
+	}
+
+	.order{
+		&__card-form{
+			position: relative;
+			top: unset;
+			left: unset;
+			background-repeat: transparent;
+			width: max-content;
+			margin-right: auto;
+			margin-left: auto;
+			width: 100%;
+			background-color: transparent;
+		}
+		&__card{
+			border: none;
+			background: rgba(#fff, .3);
+			border-radius: 50px;
+			padding: 1rem 5px;
+		}
+		&__right{
+			padding-top: 3rem;
+			text-align: center;
+		}
+		&__title{
+			font-size: 1.4rem;
+			line-height: 1.6rem;
+		}
+		&__list{
+			&-item{
+				margin-bottom: 2rem;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.section{
+		padding: 3rem 0;
+	}
+
+	.default-form{
+		&__title{
+			text-align: center;
+			font-size: 1.2rem;
+			line-height: 1.4rem;
+		}
+	}
+
+	.comparison{
+		&-square{
+			display: none;
+		}
+		&-title{
+			top: unset;
+			left: unset;
+			transform: unset;
+			position: relative;
+			text-align: center;
+			margin-bottom: 2rem;
+		}
+	}
+	
+	.founder-block{
+		&__item{
+			&-img{
+				img{
+					height: 250px;
+				}
+			}
+			&-title{
+				height: 80px;
+		    display: flex;
+		    flex-direction: column;
+		    align-items: center;
+		    text-align: center;
+		    justify-content: center;
+			}
+		}
+	}
+	.comparison-slider{
+		.arrow{
+			width: 25px;
+			&-prev{
+				left: 5px;
+			}
+			&-next{
+				right: 5px;
+			}
+		}
+		
+
+
+		&__item{
+			height: auto;
+			padding: 0 5px;
+			z-index: 30;
+
+			
+			.beer-slider{
+				z-index: 9999;
+				height: 200px;
+				img{
+					height: 100%;
+				}
+			}
+		}
+	}
+
+	.footer{
+		&:before{
+			background-color: rgba(#000, .5);
+		}
+		&__info{
+			text-align: center;
+			&-phone{
+			}
+			&-title{
+				font-size: 1rem;
+			}
+			&-text{
+				font-size: .8rem;
+			}
+			&-btn{
+				font-size: .8rem;
+			}
+		}
+		&__map{
+			height: 200px;
+			width: 100%;
+			padding-top: 2rem;
+			border: none;
+		}
+	}
+}
+
+@media screen and (max-width: 996px) {
+	 .helper{
+  	text-align: center;
+  	flex-direction: column;
+  	justify-content: center;
+  	align-items: center;
+  	padding-top: 2.4rem;
+  	padding-bottom: 	2.4rem;
+  	max-width: 400px;
+  	margin-right: auto;
+  	margin-left: auto;
+  	left: 25px;
+  	right: 	25px;
+  	&__manager{
+  		width: 100%;
+  	}
+  	&__inner{
+  		margin-top: 1rem;
+  		width: 100%;
+  		display: flex;
+  		flex-direction: column;
+	  	justify-content: center;
+	  	align-items: center;
+  	}
+  	&__contacts{
+  		flex-wrap: wrap;
+  		justify-content: center;
+  	}
+  	&__button{
+  		margin-bottom: 1rem;
+  		display: block;
+  		width: 100%;
+  	}
+  }
+	.gallery{
+		&__img{
+			width: 50%;
+		}
+	}
+	.services{
+		&__item{
+			width: 50%;
+			padding-right: 5px;
+			padding-left: 5px;
+			&-title{
+				font-size: .9rem;
+				min-height: 60px;
+			}
+			&-text{
+				min-height: 90px;
+				font-size: .8rem;
+			}
+			&-button{
+				padding: .5rem .1rem .3rem;
+				font-size: .8rem;
+				max-width: 120px;
+			}
+			&-video{
+				width: 100%;
+				padding-right: 30px;
+				padding-left: 30px;
+			}
+		}
+	}
+	
+	.tarif-order-btn{
+		max-width: 300px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.ds-tarif-block{
+		flex-wrap: wrap;
+		background-color: transparent;
+		&__desc{
+			display: none;
+		}
+		&__item{
+			height: auto;
+			padding-right: 1rem;
+			padding-left: 1rem;
+			justify-content: space-between;
+			font-size: .8rem;
+			&-img{
+				width: 15px;
+			}
+			&:first-child{
+				height: auto;
+				justify-content: center;
+				text-shadow: 0 0 2px #fff;
+			}
+			&:nth-child(2) {
+				&:before{
+					content: 'БЫСТРОЕ ПЛАНИРОВОЧНОЕ РЕШЕНИЕ';
+				}
+			}
+			&:nth-child(3) {
+				&:before{
+					content: 'ЭСКИЗЫ КОНЦЕПЦИИ';
+				}
+			}
+			&:nth-child(4) {
+				&:before{
+					content: 'ПЛАНИРОВОЧНОЕ РЕШЕНИЕ С РАССТАНОВКОЙ МЕБЕЛИ И ОБОРУДОВАНИЯ';
+				}
+			}
+			&:nth-child(5) {
+				&:before{
+					content: '3D ВИЗУАЛИЗАЦИЯ КАЖДОГО ПОМЕЩЕНИЯ';
+				}
+			}
+			&:nth-child(6) {
+				&:before{
+					content: 'РАБОЧИЕ ЧЕРТЕЖИ ДЛЯ СТРОИТЕЛЕЙ';
+				}
+			}
+			&:nth-child(7) {
+				&:before{
+					content: 'АВТОРСКИЙ НАДЗОР (ОТСЛЕЖИВАНИЕ СТРОИТЕЛЬНЫХ РАБОТ СОГЛАСНО ДИЗАЙН ПРОЕКТА';
+				}
+			}
+			&:nth-child(8) {
+				&:before{
+					content: 'ПОДБОР МАТЕРИАЛА И КОМПЛЕКТАЦИИ МЕБЕЛИ';
+				}
+			}
+			&:nth-child(9) {
+				&:before{
+					content: 'СМЕТА ПО ОТДЕЛОЧНЫМ МАТЕРИЛАМ (КОЛИЧЕСТВО И СТОИМОСТЬ)';
+				}
+			}
+			&:nth-child(10) {
+				&:before{
+					content: 'ПОЛНОЕ ВЕДЕНИЕ ПРОЕКТА С ГАРАНТИЕЙ КАЧЕСТВА СТРОИТЕЛЬ НЫХ ПРОЦЕССОВ (КОНТРОЛЬ СТР. БРИГАД)';
+				}
+			}
+			&:nth-child(11) {
+				&:before{
+					content: 'СТОИМОСТЬ РАБОТ';
+				}
+			}
+		}
+		&__card{
+			width: 100%;
+			background-color: #282f37;
+			box-shadow: unset;
+			margin-bottom: 1rem;
+			position: relative;
+			border-radius: 5px;
+			&:before{
+				display: none;
+			}
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.faq{
+		.accordionjs .acc_section .acc_head{
+			font-size: .9rem;
+		}
+		.acc-icon{
+			margin-left: 10px;
+		}
+	}
+
+	.comment-cards{
+		flex-direction: column;
+		&__item{
+			width: 100%;
+			margin-bottom: 1rem;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+	
+	.founder{
+		&__title{
+			position: relative;
+			left: unset;
+			left: unset;
+			margin-right: auto;
+			margin-left: auto;
+			margin-bottom: 2rem;
+			height: auto;
+			text-align: center;
+		}
+	}
+
+	.founder-block{
+		&_mb{
+			display: block;
+		}
+		&_ds{
+			display: none;
+		}
+		&__item{
+			&-img{
+				height: auto;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 395px) {
+	.comparison-slider{
+
+		&__item{
+			padding: 0 0;
+		}
+	}
+	.line{
+		&__logo{
+			width: 120px;
+		}
+		&__phone{
+			display: none;
+		}
+	}
+
+	.default-form{
+		&__electr{
+			display: none;
+		}
+		&__button{
+		}
+	}
+}

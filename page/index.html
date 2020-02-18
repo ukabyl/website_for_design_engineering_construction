@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Design Engineering Construction</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="img/logo-min.png">
+	<link rel="icon" href="img/logo-min.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/logo-min.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#826a45">
+	<!-- Custom Browsers Color End -->
+
+
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/slick/slick/slick.css">
+	<link rel="stylesheet" href="libs/fancybox/dist/jquery.fancybox.css">
+	<link rel="stylesheet" href="libs/hamburgers/dist/hamburgers.min.css">
+	<link rel="stylesheet" href="libs/accordion/accordion.css">
+	<link rel="stylesheet" href="libs/iziModal/css/iziModal.min.css">
+	<link rel="stylesheet" href="libs/aos/aos.css">
+	<link rel="stylesheet" href="libs/beforeafter/BeerSlider.css">
+	<link rel="stylesheet" href="icons/style.css">
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+
+	<!-- header -->
+	<header class="header">
+		<div class="line">
+			<div class="container">
+				<div class="line__content">
+					<a href="/" class="line__logo">
+						<img class="img-fluid" src="img/logo-min.png">
+					</a>
+					<div class="line__menu">
+						<ul class="ds-menu">
+							<li class="ds-menu__item">
+								<a href="/" class="ds-menu__link">Главная</a>
+							</li>
+							<li class="ds-menu__item">
+								<a href="#order" class="ds-menu__link anchor">Расчёт стоимости</a>
+							</li>
+							<li class="ds-menu__item">
+								<a href="#service" class="ds-menu__link anchor">Услуги</a>
+							</li>
+							<li class="ds-menu__item">
+								<a href="#tarif" class="ds-menu__link anchor">Тарифы</a>
+							</li>
+							<li class="ds-menu__item">
+								<a href="#gallery" class="ds-menu__link anchor">Наши работы</a>
+							</li>
+							<li class="ds-menu__item">
+								<a href="#faq" class="ds-menu__link anchor">FAQ</a>
+							</li>
+							<li class="ds-menu__item">
+								<a href="#comment" class="ds-menu__link anchor">Отзывы</a>
+							</li>
+							<li class="ds-menu__item">
+								<a href="#contact" class="ds-menu__link anchor">Контакты</a>
+							</li>
+						</ul>
+					</div>
+					<div class="line__other">
+						<a href="#" class="line__social"><span class="icon-facebook"></span></a>
+						<a href="#" class="line__social"><span class="icon-instagram1"></span></a>
+						<div class="line__phone">
+							<a href="tel:87751616111" class="phone">8 775 161 61 11</a>
+							<button class="line__order" data-fancybox data-src="#modal-form" href="javascript:;">Заказать звонок</button>
+						</div>
+						<button class="hamburger d-block d-xl-none" type="button">
+						  <span class="hamburger-box">
+						    <span class="hamburger-inner"></span>
+						  </span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- header -->
+
+	<!-- main -->
+	<main class="main section">
+		<div class="main__slider">
+			<div class="main-slider">
+				<div class="main-slider__item" style="background-image: url('img/main-bg-min.png');">
+				</div>
+				<div class="main-slider__item" style="background-image: url('img/order-bg-min.png');">
+				</div>
+			</div>
+		</div>
+		<div class="container">
+				<div class="main__content">
+					<h1 class="main__title">Современный дизайн интерьера жилых и коммерческих помещений от идеи до реализации</h1>
+					<h2 class="main__title-second">Комплексное решение от концепции до ремонта "под ключ" с комплектацией мебелью и подбором материалов</h2>
+					<button class="main__button button">
+						Пройти тест и получить бесплатную консультацию
+					</button>
+				</div>
+		</div>
+	</main>	
+	<!-- main -->
+
+	<!-- order -->
+	<section id="order" class="order section" style="background-image: url('img/order-bg-min.png');">
+		<div class="container">
+			<div class="order__card">
+				<div class="row">
+					<div class="col-12 col-xl-6">
+						<div class="order__card-form">
+							<div class="default-form order__default-form">
+								<img class="default-form__circle" src="img/red-circle-min.png">
+								<img class="default-form__electr" src="img/electr-thing-min.png">
+								<b class="default-form__title order__title">
+									Пройдите тест и получите расчёт стоимости вашего проекта
+								</b>
+								<form class="default-form__inner">
+									<label for="" class="default-form__label">
+										<div class="default-form__label-title">Ваше имя:</div>
+										<input required type="text" name="name" class="default-form__input">
+										<span class="default-form__label-icon icon-user"></span>
+									</label>
+									<label for="" class="default-form__label">
+										<div class="default-form__label-title">Телефон:</div>
+										<input required type="tel" name="phone" class="default-form__input tel-mask">
+										<span class="default-form__label-icon icon-phone"></span>
+									</label>
+									<label for="" class="default-form__label">
+										<div class="default-form__label-title">Тип объекта:</div>
+										<input required type="text" name="type_of_object" class="default-form__input">
+										<span class="default-form__label-icon icon-receipt"></span>
+									</label>
+									<button type="submit" class="default-form__button button"  data-fancybox data-src="#modal-form" href="javascript:;">Оставить заявку</button>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-xl-6">
+						<div class="order__right">
+							<b class="order__title">Заказав дизайн у нас вы получаете в подарок:</b>
+							<ul class="order__list">
+								<li class="order__list-item">
+									<div class="order__list-icon">
+										<img class="img-fluid" src="img/order-icon1-min.png">
+									</div>
+									<div class="order__list-text">
+										АВТОРСКИЙ НАДЗОР (ОТСЛЕЖИВАНИЕ СТРОИТЕЛЬНЫХ РАБОТ СОГЛАСНО ДИЗАЙН ПРОЕКТУ)
+									</div>
+								</li>
+								<li class="order__list-item">
+									<div class="order__list-icon">
+										<img class="img-fluid" src="img/order-icon2-min.png">
+									</div>
+									<div class="order__list-text">
+										СПИСОК ПРОВЕРЕННЫХ СТРОИТЕЛЬНЫХ БРИГАД 
+										СОВМЕСТНЫЙ ОzПЫТ РАБОТЫ БОЛЕЕ 30 ОБЪЕКТОВ
+									</div>
+								</li>
+								<li class="order__list-item">
+									<div class="order__list-icon">
+										<img class="img-fluid" src="img/order-icon3-min.png">
+									</div>
+									<div class="order__list-text">
+										ДОПОЛНИТЕЛЬНАЯ СКИДКА ОТ МАГАЗИНОВ ПАРТНЕРОВ
+										СКИДКИ ОТ 5%
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- order -->
+
+	<!-- service -->
+	<section id="service" class="service">
+		<div class="services">
+			<div class="services__item" style="background-image: url('img/page1-min.png');">
+				<b class="services__item-title">Дизайн живых интерьеров</b>
+				<p class="services__item-text">Квартиры и загородные дома</p>
+				<a href="#" class="services__item-button button">Подробнее</a>
+			</div>
+			<div class="services__item" style="background-image: url('img/page2-min.png');">
+				<b class="services__item-title">ИНТЕРЬЕР ДЛЯ БИЗНЕСА</b>
+				<p class="services__item-text">ОФИСЫ, ГОСТИНИЦЫ, РЕСТОРАНЫ, КАФЕ, САЛОНЫ КРАСОТЫ И ДР. </p>
+				<a href="#" class="services__item-button button">Подробнее</a>
+			</div>
+			<div class="services__item" style="background-image: url('img/page3-min.png');">
+				<b class="services__item-title">БЫСТРОЕ ПЛАНИРОВОЧНОЕ РЕШЕНИЕ</b>
+				<p class="services__item-text">ИНДИВИДУАЛЬНОЕ ПЛАНИРОВОЧНОЕ РЕШЕНИЕ И КОНСУЛЬТАЦИЯ ПО ДИЗАЙНУ</p>
+				<a href="#" class="services__item-button button">Подробнее</a>
+			</div>
+			<div class="services__item" style="background-image: url('img/page4-min.png');">
+				<b class="services__item-title">РЕМОНТ И ОТДЕЛКА</b>
+				<p class="services__item-text">РАБОТЫ ЛЮБОЙ СЛОЖНОСТИ И ОБЪЕМА</p>
+				<a href="#" class="services__item-button button">Подробнее</a>
+			</div>
+			<div data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="services__item services__item-video" style="background-image: url('img/video-min.png');">
+				<b class="services__item-video-title">Видео</b>
+				<div class="services__item-video-icon">
+					<img src="img/play-min.png" class="img-fluid">
+				</div>
+				<b class="services__item-video-title-second">
+					ПОСЛЕ ПРОСМОТРА ВЫ УЗНАЕТЕ
+				</b>
+				<div class="services__item-video-text">
+					КАК СОЗДАЕТСЯ ДИЗАЙН ИНТЕРЬЕРА И КАК ПРАВИЛЬНО ВЫБРАТЬ ДИЗАЙНЕРА
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- service -->
+
+	<!-- tarif -->
+	<section id="tarif" class="tarif section" style="background-image: url('img/tarif-bg-min.png');">
+		<div class="container">
+			<div class="ds-tarif-block">
+				<div class="ds-tarif-block__desc">
+					<div class="ds-tarif-block__item ds-tarif-block__desc-item">
+						<img class="img-fluid ds-tarif-block__item-logo" src="img/logo-min.png">
+					</div>
+					<div class="ds-tarif-block__item ds-tarif-block__desc-item">
+						БЫСТРОЕ ПЛАНИРОВОЧНОЕ РЕШЕНИЕ
+					</div>
+					<div class="ds-tarif-block__item ds-tarif-block__desc-item">
+						ЭСКИЗЫ КОНЦЕПЦИИ
+					</div>
+					<div class="ds-tarif-block__item ds-tarif-block__desc-item">
+						ПЛАНИРОВОЧНОЕ РЕШЕНИЕ С РАССТАНОВКОЙ МЕБЕЛИ И ОБОРУДОВАНИЯ
+					</div>
+					<div class="ds-tarif-block__item ds-tarif-block__desc-item">
+						3D ВИЗУАЛИЗАЦИЯ КАЖДОГО ПОМЕЩЕНИЯ
+					</div>
+					<div class="ds-tarif-block__item ds-tarif-block__desc-item">
+						РАБОЧИЕ ЧЕРТЕЖИ ДЛЯ СТРОИТЕЛЕЙ
+					</div>
+					<div class="ds-tarif-block__item ds-tarif-block__desc-item">
+						АВТОРСКИЙ НАДЗОР (ОТСЛЕЖИВАНИЕ СТРОИТЕЛЬНЫХ РАБОТ СОГЛАСНО ДИЗАЙН ПРОЕКТА
+					</div>
+					<div class="ds-tarif-block__item ds-tarif-block__desc-item">
+						ПОДБОР МАТЕРИАЛА И КОМПЛЕКТАЦИИ МЕБЕЛИ
+					</div>
+					<div class="ds-tarif-block__item ds-tarif-block__desc-item">
+						СМЕТА ПО ОТДЕЛОЧНЫМ МАТЕРИЛАМ (КОЛИЧЕСТВО И СТОИМОСТЬ)
+					</div>
+					<div class="ds-tarif-block__item ds-tarif-block__desc-item">
+						ПОЛНОЕ ВЕДЕНИЕ ПРОЕКТА С ГАРАНТИЕЙ КАЧЕСТВА СТРОИТЕЛЬ НЫХ ПРОЦЕССОВ (КОНТРОЛЬ СТР. БРИГАД)
+					</div>
+					<div class="ds-tarif-block__item ds-tarif-block__desc-item">
+						СТОИМОСТЬ РАБОТ
+					</div>
+					<div class="ds-tarif-block__item ds-tarif-block__desc-item">
+					</div>
+				</div>
+				<div class="ds-tarif-block__card">
+					<div class="ds-tarif-block__item">
+						Express
+					</div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/check-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/error-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/error-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/error-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/error-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/error-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/error-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/error-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/error-min.png"></div>
+					<div class="ds-tarif-block__item"><b>от <span>1000тг</span> кв/м</b></div>
+					<div class="ds-tarif-block__item"><button class="tarif-order-btn"  data-fancybox data-src="#modal-form" href="javascript:;">Заказать</button></div>
+				</div>
+				<div class="ds-tarif-block__card">
+					<div class="ds-tarif-block__item">
+						Econom
+					</div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/check-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/check-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/check-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/check-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/error-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/error-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/error-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/error-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/error-min.png"></div>
+					<div class="ds-tarif-block__item"><b>от <span>3000тг</span> кв/м</b></div>
+					<div class="ds-tarif-block__item"><button class="tarif-order-btn"  data-fancybox data-src="#modal-form" href="javascript:;">Заказать</button></div>
+				</div>
+				<div class="ds-tarif-block__card">
+					<div class="ds-tarif-block__item">
+						Standard
+					</div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/check-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/check-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/check-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/check-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/check-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/check-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/check-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/check-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/error-min.png"></div>
+					<div class="ds-tarif-block__item"><b>от <span>5000тг</span> кв/м</b></div>
+					<div class="ds-tarif-block__item"><button class="tarif-order-btn"  data-fancybox data-src="#modal-form" href="javascript:;">Заказать</button></div>
+				</div>
+				<div class="ds-tarif-block__card">
+					<div class="ds-tarif-block__item">
+						Premium
+					</div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/check-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/check-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/check-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/check-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/check-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/check-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/check-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/check-min.png"></div>
+					<div class="ds-tarif-block__item"><img class="ds-tarif-block__item-img" src="img/check-min.png"></div>
+					<div class="ds-tarif-block__item"><b>от <span>7000тг</span> кв/м</b></div>
+					<div class="ds-tarif-block__item"><button class="tarif-order-btn"  data-fancybox data-src="#modal-form" href="javascript:;">Заказать</button></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- tarif -->
+	
+
+	<!-- comparison -->
+	<section class="comparison section">
+		<div class="container">
+			<div class="comparison-block">
+				<div class="comparison-title">Интерьер до и после</div>
+				<div class="comparison-square"></div>
+				<div class="comparison-slider">
+					<div class="comparison-slider__item">
+						<div id="slider" class="beer-slider" data-beer-label="После ремонта">
+						  <img src="img/before-after2-min.png" alt="После ремонта">
+						  <div class="beer-reveal" data-beer-label="До ремонта">
+						    <img src="img/before-after1-min.png" alt="До ремонта">
+						  </div>
+						</div>
+					</div>
+					<div class="comparison-slider__item">
+						<div id="slider" class="beer-slider" data-beer-label="После ремонта">
+						  <img src="img/before-after2-min.png" alt="После ремонта">
+						  <div class="beer-reveal" data-beer-label="До ремонта">
+						    <img src="img/before-after1-min.png" alt="До ремонта">
+						  </div>
+						</div>
+					</div>
+					<div class="comparison-slider__item">
+						<div id="slider" class="beer-slider" data-beer-label="После ремонта">
+						  <img src="img/before-after2-min.png" alt="После ремонта">
+						  <div class="beer-reveal" data-beer-label="До ремонта">
+						    <img src="img/before-after1-min.png" alt="До ремонта">
+						  </div>
+						</div>
+					</div>
+					<div class="comparison-slider__item">
+						<div id="slider" class="beer-slider" data-beer-label="После ремонта">
+						  <img src="img/before-after2-min.png" alt="После ремонта">
+						  <div class="beer-reveal" data-beer-label="До ремонта">
+						    <img src="img/before-after1-min.png" alt="До ремонта">
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- comparison -->
+
+	<!-- gallery -->
+	<section id="gallery" class="gallery">
+		<div class="gallery__img">
+			<img src="img/gallery1-min.png" class="img-fluid">
+		</div>
+		<div class="gallery__img">
+			<img src="img/gallery2-min.png" class="img-fluid">
+		</div>
+		<div class="gallery__img">
+			<img src="img/gallery3-min.png" class="img-fluid">
+		</div>
+		<div class="gallery__img">
+			<img src="img/gallery4-min.png" class="img-fluid">
+		</div>
+		<div class="gallery__img">
+			<img src="img/gallery5-min.png" class="img-fluid">
+		</div>
+		<div class="gallery__img">
+			<img src="img/gallery6-min.png" class="img-fluid">
+		</div>
+	</section>
+	<!-- gallery -->
+
+	<!-- faq -->
+	<section id="faq" class="faq section">
+		<div class="container">
+			<div class="faq__accordion">
+				<ul class="faq-accordion accordionjs">
+
+					    <!-- Section 1 -->
+					    <li>
+					        <div><span>ИЗ ЧЕГО ФОРМИРУЕТСЯ ЦЕНА?</span> <img src="img/arrow-down-min.png" class="acc-icon"></div>
+					        <div>
+					            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, voluptas!
+					        </div>
+					    </li>
+
+					    <!-- Section 2 -->
+					    <li>
+					        <div><span>Почему у вас выгоднее покупать туры чем в других агентствах?</span> <img src="img/arrow-down-min.png" class="acc-icon"></div>
+					        <div>
+					            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					        </div>
+					    </li>
+
+					    <!-- Section 3 -->
+					    <li>
+					        <div><span>МОЖЕТЕ ЛИ ПРОКОНСУЛЬТИРОВАТЬ?</span> <img src="img/arrow-down-min.png" class="acc-icon"></div>
+					        <div>
+					            Lorem ipsum dolor sit amet.
+					        </div>
+					    </li>
+
+					    <!-- Section 4 -->
+					    <li>
+					        <div><span>ЧТО ВХОДИТ В СОСТАВ ПРОЕКТА?</span> <img src="img/arrow-down-min.png" class="acc-icon"></div>
+					        <div>
+					            Lorem ipsum dolor sit amet.
+					        </div>
+					    </li>
+
+					    <!-- Section 4 -->
+					    <li>
+					        <div><span>ГДЕ КУПИТЬ МАТЕРИАЛЫ? ЗАЛОЖЕННЫЕ В ПРОЕКТ</span> <img src="img/arrow-down-min.png" class="acc-icon"></div>
+					        <div>
+					            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil maiores consectetur libero temporibus perspiciatis minus obcaecati fugiat aspernatur similique assumenda atque eos, molestias eveniet nulla repellat? Ratione possimus omnis consectetur?
+					        </div>
+					    </li>
+
+					    <!-- Section 5 -->
+					    <li>
+					        <div><span>ГДЕ КУПИТЬ ПРЕДМЕТЫ МЕБЕЛИ? ОСВЕЩЕНИЕ АКССЕСУАРЫ?</span> <img src="img/arrow-down-min.png" class="acc-icon"></div>
+					        <div>
+					            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					        </div>
+					    </li>
+
+						</ul>
+			</div>
+		</div>
+	</section>
+	<!-- faq -->
+
+	<!-- comment -->
+	<section id="comment" class="comment section">
+		<div class="container">
+			<div class="comment-cards">
+				<div class="comment-cards__item">
+					<div class="comment-cards__img">
+						<img src="img/card-img1-min.png">
+					</div>
+					<div class="comment-cards__title">
+						<b>Квартира 1000 серии</b>
+					</div>
+					<div class="comment-cards__text">
+						<b class="comment-cards__text-title">
+							САША И МАША
+						</b>
+						<span class="comment-cards__text-comment">
+							Современный Казахстан манит самыми разнообразными экскурсиями и программами: знаменитый высокогорный каток Медео, первый в мире космодром Байконур, грандиозный каньон Чарын, уникальные суфийские памятники, древние города Тараз, Шымкент и Туркестан. Войлочные юрты, целебный кумыс, бескрайние степи - Казахстан запомнится вам
+						</span>
+					</div>
+				</div>
+				<div class="comment-cards__item">
+					<div class="comment-cards__img">
+						<img src="img/card-img2-min.png">
+					</div>
+					<div class="comment-cards__title">
+						<b>Квартира 1000 серии</b>
+					</div>
+					<div class="comment-cards__text">
+						<b class="comment-cards__text-title">
+							САША И МАША
+						</b>
+						<span class="comment-cards__text-comment">
+							Современный Казахстан манит самыми разнообразными экскурсиями и программами: знаменитый высокогорный каток Медео, первый в мире космодром Байконур, грандиозный каньон Чарын, уникальные суфийские памятники, древние города Тараз, Шымкент и Туркестан. Войлочные юрты, целебный кумыс, бескрайние степи - Казахстан запомнится вам
+						</span>
+					</div>
+				</div>
+				<div class="comment-cards__item">
+					<div class="comment-cards__img">
+						<img src="img/card-img3-min.png">
+					</div>
+					<div class="comment-cards__title">
+						<b>Квартира 1000 серии</b>
+					</div>
+					<div class="comment-cards__text">
+						<b class="comment-cards__text-title">
+							САША И МАША
+						</b>
+						<span class="comment-cards__text-comment">
+							Современный Казахстан манит самыми разнообразными экскурсиями и программами: знаменитый высокогорный каток Медео, первый в мире космодром Байконур, грандиозный каньон Чарын, уникальные суфийские памятники, древние города Тараз, Шымкент и Туркестан. Войлочные юрты, целебный кумыс, бескрайние степи - Казахстан запомнится вам
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- comment -->
+
+	<!-- founder -->
+	<section class="founder section">
+		<div class="container">
+			<div class="founder-title founder__title">
+				<div class="founder-title__img">
+					<img src="img/logo-min.png" alt="logo">
+				</div>
+				<div class="founder-title__title">
+					<span>Наша команда это:</span>
+					<b>Специалисты своего дела!</b>
+				</div>
+			</div>
+			<div class="founder-block founder-block_ds">
+				
+				<div class="founder-block-wrapper founder-block-wrapper_small">
+						<div class="founder-block__item founder-block__item_small">
+							
+						</div>					
+						<div class="founder-block__item founder-block__item_small">
+							<div class="founder-block__item-img">
+								<img src="img/erkebulan-min.png" alt="logo">
+							</div>
+							<div class="founder-block__item-title">
+								<span>Архитектор дизайнер</span>
+								<b>Еркеюулан Жусупбеков</b>
+							</div>
+						</div>					
+				</div>
+				<div class="founder-block-wrapper">
+					<div class="founder-block__item ">
+						<div class="founder-block__item-img">
+							<img src="img/founder.JPG" alt="logo">
+						</div>
+						<div class="founder-block__item-title">
+							<span>Директор ТОО "JC_DESIGN_STUDiO" руководитель студии: </span>
+							<b>Евгений Тян</b>
+						</div>
+					</div>
+				</div>
+				<div class="founder-block-wrapper founder-block-wrapper_small">
+					<div class="founder-block__item founder-block__item_small">
+						<div class="founder-block__item-img">
+							<img src="img/maria-min.png" alt="logo">
+						</div>
+						<div class="founder-block__item-title">
+							<span>Бухгалтерия</span>
+							<b>МАРИЯ ОВЧАРЕНКО</b>
+						</div>
+					</div>
+					<div class="founder-block__item founder-block__item_small">
+						<div class="founder-block__item-img">
+							<img src="img/sergey-min.png" alt="logo">
+						</div>
+						<div class="founder-block__item-title">
+							<span>Тот кто на самом деле работает:</span>
+							<b>СЕРГЕЙ ПОВЕТЬЕВ</b>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="founder-block founder-block_mb">
+				<div class="founder-block__item">
+					<div class="founder-block__item-img">
+						<img src="img/founder.JPG" alt="logo">
+					</div>
+					<div class="founder-block__item-title">
+						<span>Директор ТОО "JC_DESIGN_STUDiO" руководитель студии: </span>
+						<b>Евгений Тян</b>
+					</div>
+				</div>
+				<div class="founder-block__item">
+					<div class="founder-block__item-img">
+						<img src="img/erkebulan-min.png" alt="logo">
+					</div>
+					<div class="founder-block__item-title">
+						<span>Архитектор дизайнер</span>
+						<b>Еркеюулан Жусупбеков</b>
+					</div>
+				</div>
+				<div class="founder-block__item">
+					<div class="founder-block__item-img">
+						<img src="img/sergey-min.png" alt="logo">
+					</div>
+					<div class="founder-block__item-title">
+						<span>Тот кто на самом деле работает:</span>
+						<b>СЕРГЕЙ ПОВЕТЬЕВ</b>
+					</div>
+				</div>
+				<div class="founder-block__item">
+					<div class="founder-block__item-img">
+						<img src="img/maria-min.png" alt="logo">
+					</div>
+					<div class="founder-block__item-title">
+						<span>Бухгалтерия</span>
+						<b>МАРИЯ ОВЧАРЕНКО</b>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- founder -->
+
+	<!-- footer -->
+	<footer id="contact" class="footer" style="background-image: url('img/footer-bg.png')">
+		<div class="footer_up section">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-12 col-xl-4">
+						<div class="footer__info">
+							<div class="footer__info-item">
+								<div class="footer__info-title">Наши контакты</div>
+								<p class="footer__info-text">
+									Г. ШЫМКЕНТ, УЛ. АКПАН БАТЫРА 111
+									ЗДАНИЕ САЛОНА СТРОИТЕЛЬНЫХ МАТЕРИАЛОВ MONARCH
+								</p>
+								<a href="tel:87751616111" class="footer__info-phone">8 775 161 61 11</a>
+							</div>
+						</div>
+						<div class="footer__info">
+							<div class="footer__info-item">
+								<div class="footer__info-title">ОСТАЛИСЬ ВОПРОСЫ?</div>
+								<p class="footer__info-text">
+									ОСТАВЬТЕ ЗАЯВКУ И НАМ МЕНЕДЖЕМ СВЯЖЕТЬСЯ С ВАМИ И ОТВЕТИТ НА ВСЕ ВАШИ ВОПРОСЫ
+								</p>
+								<button class="footer__info-btn button"  data-fancybox data-src="#modal-form" href="javascript:;">Оставить заявку</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-xl-8">
+						<div class="footer__map">
+							<a class="dg-widget-link" href="http://2gis.kz/shymkent/firm/70000001026458935/center/69.61761474609376,42.324602922069126/zoom/15?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Шымкента</a><div class="dg-widget-link"><a href="http://2gis.kz/shymkent/firm/70000001026458935/photos/70000001026458935/center/69.61761474609376,42.324602922069126/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos">Фотографии компании</a></div><div class="dg-widget-link"><a href="http://2gis.kz/shymkent/center/69.617565,42.324094/zoom/15/routeTab/rsType/bus/to/69.617565,42.324094╎Астана Энерго Ресурс, магазин?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до Астана Энерго Ресурс, магазин</a></div><script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script><script charset="utf-8">new DGWidgetLoader({"width":100+'%',"height":100+'%',"borderColor":"#a3a3a3","pos":{"lat":42.324602922069126,"lon":69.61761474609376,"zoom":15},"opt":{"city":"shymkent"},"org":[{"id":"70000001026458935"}]});</script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="line">
+			<div class="container">
+				<div class="line__content">
+					<a href="/" class="line__logo">
+						<img class="img-fluid" src="img/logo-min.png">
+					</a>
+					<div class="line__menu">
+						<ul class="ds-menu">
+							<li class="ds-menu__item">
+								<a href="/" class="ds-menu__link">Главная</a>
+							</li>
+							<li class="ds-menu__item">
+								<a href="#order" class="ds-menu__link anchor">Расчёт стоимости</a>
+							</li>
+							<li class="ds-menu__item">
+								<a href="#service" class="ds-menu__link anchor">Услуги</a>
+							</li>
+							<li class="ds-menu__item">
+								<a href="#tarif" class="ds-menu__link anchor">Тарифы</a>
+							</li>
+							<li class="ds-menu__item">
+								<a href="#gallery" class="ds-menu__link anchor">Наши работы</a>
+							</li>
+							<li class="ds-menu__item">
+								<a href="#faq" class="ds-menu__link anchor">FAQ</a>
+							</li>
+							<li class="ds-menu__item">
+								<a href="#comment" class="ds-menu__link anchor">Отзывы</a>
+							</li>
+							<li class="ds-menu__item">
+								<a href="#contact" class="ds-menu__link anchor">Контакты</a>
+							</li>
+						</ul>
+					</div>
+					<div class="line__other">
+						<a href="#" class="line__social"><span class="icon-facebook"></span></a>
+						<a href="#" class="line__social"><span class="icon-instagram1"></span></a>
+						<div class="line__phone">
+							<a href="tel:87751616111" class="phone">8 775 161 61 11</a>
+							<button class="line__order"  data-fancybox data-src="#modal-form" href="javascript:;">Заказать звонок</button>
+						</div>
+						<button class="hamburger d-block d-xl-none" type="button">
+						  <span class="hamburger-box">
+						    <span class="hamburger-inner"></span>
+						  </span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- footer -->
+
+
+	<!-- ****************************************** Helper -->
+	<div class="helper">
+		<div class="helper__close">
+			<img src="img/close.png" align="Close" class="img-fluid">
+		</div>
+		<div class="helper__manager">
+			<img src="img/manager-placeholder-min.png" class="img-fluid">
+		</div>
+		<div class="helper__inner">
+			<div class="helper__title">
+				Не знаете с чего начать?
+			</div>
+			<div class="helper__text">
+				НАШ МЕНЕДЖЕР ОТВЕТИТ НА ВСЕ ИНТЕРЕСУЮЩИЕ ВАС ВОПРОСЫ
+			</div>
+			<div class="helper__contacts">
+				<button class="button helper__button" data-izimodal-open="#modal-form">Подберите мне тур</button>
+				<a href="/" class="helper__contacts-item icon-telegram"></a>
+				<a href="/" class="helper__contacts-item icon-instagram1"></a>
+				<a href="/" class="helper__contacts-item icon-whatsapp"></a>
+			</div>
+		</div>
+	</div>
+	<!-- ****************************************** Helper -->
+
+	<!-- ****************************************** Manager trigger -->
+	<div class="manager">
+		<img src="img/manager-placeholder-min.png" class="img-fluid">
+	</div>
+	<!-- ****************************************** Manager trigger -->
+
+	<!-- modal form -->
+	<div style="display: none;" class="modal-form" data-auto-focus="false" id="modal-form">
+		<div class="default-form modal-form__default-form">
+			<b class="default-form__title order__title">
+				Пройдите тест и получите расчёт стоимости вашего проекта
+			</b>
+			<form class="default-form__inner">
+				<label for="" class="default-form__label">
+					<div class="default-form__label-title">Ваше имя:</div>
+					<input required type="text" name="name" class="default-form__input">
+					<span class="default-form__label-icon icon-user"></span>
+				</label>
+				<label for="" class="default-form__label">
+					<div class="default-form__label-title">Телефон:</div>
+					<input required type="tel" name="phone" class="default-form__input tel-mask">
+					<span class="default-form__label-icon icon-phone"></span>
+				</label>
+				<label for="" class="default-form__label">
+					<div class="default-form__label-title">Тип объекта:</div>
+					<input required type="text" name="type_of_object" class="default-form__input">
+					<span class="default-form__label-icon icon-receipt"></span>
+				</label>
+				<button type="submit" class="default-form__button button"  data-fancybox data-src="#modal-form" href="javascript:;">Оставить заявку</button>
+			</form>
+		</div>
+	</div>
+	<!-- modal form -->
+
+	<!-- ****************************************** SideBar -->
+	<div id="sidebar" class="sidebar">			
+			<div class="sidebar__wrapper">
+				<div class="sidebar__close close-sidebar">
+					<span class="icon-back"></span>
+				</div>
+			 	<div class="sidebar-top">
+					<div class="sidebar-top__inner">
+						<img src="img/logo-min.png" class="img-fluid ">
+					</div>
+				</div>
+		  	<ul class="mb-menu">
+					<li class="mb-menu-item">
+						<a href="/" class="mb-menu-item-link close-sidebar"><span>Главная</span></a>
+					</li>
+					<li class="mb-menu-item">
+						<a href="#order" class="mb-menu-item-link close-sidebar anchor"><span>Расчёт стоимости</span></a>
+					</li>
+					<li class="mb-menu-item">
+						<a href="#service" class="mb-menu-item-link close-sidebar anchor"><span>УСЛУГИ</span></a>
+					</li>
+					<li class="mb-menu-item">
+						<a href="#tarif" class="mb-menu-item-link close-sidebar anchor"><span>ТАРИФЫ</span></a>
+					</li>
+					<li class="mb-menu-item">
+						<a href="#gallery" class="mb-menu-item-link close-sidebar anchor"><span>НАШИ РАБОТЫ</span></a>
+					</li>
+					<li class="mb-menu-item">
+						<a href="#faq" class="mb-menu-item-link close-sidebar anchor"><span>FAQ</span></a>
+					</li>
+					<li class="mb-menu-item">
+						<a href="#comment" class="mb-menu-item-link close-sidebar anchor"><span>ОТЗЫВЫ</span></a>
+					</li>
+					<li class="mb-menu-item">
+						<a href="#contact" class="mb-menu-item-link close-sidebar anchor"><span>КОНТАКТЫ</span></a>
+					</li>
+				</ul>
+		  </div>
+	</div>
+	<!-- ****************************************** SideBar -->
+
+
+	
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+	<script src="libs/slick/slick/slick.js"></script>
+	<script src="libs/beforeafter/BeerSlider.js"></script>
+	<script src="libs/fancybox/dist/jquery.fancybox.js"></script>
+	<script src="libs/accordion/accordion.min.js"></script>
+	<script src="libs/simpler-sidebar/src/simpler-sidebar.js"></script>
+	<script src="libs/iziModal/js/iziModal.min.js"></script>
+	<script src="libs/maskinput/maskinput.js"></script>
+	<script src="libs/aos/aos.js"></script>
+	<script src="js/scripts.js"></script>
+
+</body>
+</html>

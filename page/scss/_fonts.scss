@@ -1,0 +1,27 @@
+// font-weight helper:
+
+// 100 Extra Light or Ultra Light;
+// 200 Light or Thin; 
+//300 Book or Demi;
+// 400 Regular or Normal;
+// 500 Medium;
+// 600 Semibold or Demibold;
+// 700 Bold;
+// 800 Black or Extra Bold or Heavy;
+// 900 Extra Black or Fat or Ultra Black
+
+@import "_mixins/font-face";
+
+@include font-face("roboto-example", "../fonts/RobotoRegular/RobotoRegular");
+@include font-face("roboto-example", "../fonts/RobotoBold/RobotoBold", bold);
+
+
+@include font-face("ttnorms", "../fonts/TTNorms-Black/TTNorms-Black", 800);
+@include font-face("ttnorms", "../fonts/TTNorms-Bold/TTNorms-Bold", 700);
+@include font-face("ttnorms", "../fonts/TTNorms-ExtraBold/TTNorms-ExtraBold", 800);
+// @include font-face("ttnorms", "../fonts/TTNorms-Heavy/TTNorms-Heavy", 800);
+@include font-face("ttnorms", "../fonts/TTNorms-Light/TTNorms-Light", 200);
+@include font-face("ttnorms", "../fonts/TTNorms-Medium/TTNorms-Medium", 500);
+@include font-face("ttnorms", "../fonts/TTNorms-Regular/TTNorms-Regular", 400);
+// @include font-face("ttnorms", "../fonts/TTNorms-SemiBold/TTNorms-SemiBold", 600);
+// @include font-face("ttnorms", "../fonts/TTNorms-UltraLight/TTNorms-UltraLight", 100);
