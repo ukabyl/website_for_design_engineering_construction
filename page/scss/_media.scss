@@ -14,6 +14,34 @@
 				font-size: 1rem;
 			}
 		}
+		&_mb{
+			.ds-menu{
+				display: block;
+				margin-bottom: 2rem;
+				&__item{
+					margin: 0 0 .5rem 0;
+				}
+				&__link{
+					font-size: 1rem;
+				}
+			}
+			.line{
+				&__logo{
+					width: 200px;
+					margin-bottom: 2rem;
+				}
+				&__social{
+					font-size: 3rem;
+				}
+				&__content{
+					padding: 2rem 0;
+					flex-direction: column;
+					text-align: center;
+					justify-content: center;
+					align-items: center;
+				}
+			}
+		}
 	}
 	.ds-menu{
 		display: none;
@@ -36,6 +64,7 @@
 
 	.main{
 		text-align: center;
+		min-height: auto;
 		&__button{
 			max-width: 100%;
 			text-transform: uppercase;
@@ -61,7 +90,6 @@
 			margin-right: auto;
 			margin-left: auto;
 			width: 100%;
-			background-color: transparent;
 		}
 		&__card{
 			border: none;
@@ -70,18 +98,26 @@
 			padding: 1rem 5px;
 		}
 		&__right{
-			padding-top: 3rem;
+			margin-top: 3rem;
+			padding: 10px;
+			border-radius: 5px;
 			text-align: center;
+			background: #fff;
 		}
 		&__title{
-			font-size: 1.4rem;
-			line-height: 1.6rem;
+			font-size: 1rem;
+			line-height: 1.2rem;
 		}
 		&__list{
+			&-icon{
+				width: 15%;
+			}
+			&-text{
+				width: 85%;
+				font-size: .8rem;
+			}
 			&-item{
 				margin-bottom: 2rem;
-				flex-direction: column;
-				justify-content: center;
 				align-items: center;
 				&:last-child{
 					margin-bottom: 0;
@@ -95,10 +131,11 @@
 	}
 
 	.default-form{
+		max-width: 100%;
 		&__title{
 			text-align: center;
-			font-size: 1.2rem;
-			line-height: 1.4rem;
+			font-size: 1rem;
+			line-height: 1.2rem;
 		}
 	}
 
@@ -181,7 +218,7 @@
 			}
 		}
 		&__map{
-			height: 200px;
+			height: 400px;
 			width: 100%;
 			padding-top: 2rem;
 			border: none;
@@ -230,20 +267,25 @@
 	}
 	.services{
 		&__item{
-			width: 50%;
+			width: 100%;
 			padding-right: 5px;
 			padding-left: 5px;
+			padding-top: 20px;
+			padding-bottom: 20px;
 			&-title{
-				font-size: .9rem;
-				min-height: 60px;
+				font-size: .8rem;
+				min-height: auto;
+				margin-bottom: .5rem;
+				text-shadow: 0 0 1px #fff;
 			}
 			&-text{
-				min-height: 90px;
-				font-size: .8rem;
+				min-height: auto;
+				font-size: .7rem;
+				text-shadow: 0 0 1px #fff;
 			}
 			&-button{
 				padding: .5rem .1rem .3rem;
-				font-size: .8rem;
+				font-size: .6rem;
 				max-width: 120px;
 			}
 			&-video{
@@ -263,6 +305,7 @@
 	.ds-tarif-block{
 		flex-wrap: wrap;
 		background-color: transparent;
+		display: none;
 		&__desc{
 			display: none;
 		}
@@ -276,9 +319,7 @@
 				width: 15px;
 			}
 			&:first-child{
-				height: auto;
-				justify-content: center;
-				text-shadow: 0 0 2px #fff;
+				display: none;
 			}
 			&:nth-child(2) {
 				&:before{
@@ -338,12 +379,38 @@
 			margin-bottom: 1rem;
 			position: relative;
 			border-radius: 5px;
+			color: #fff;
 			&:before{
 				display: none;
 			}
 			&:last-child{
 				margin-bottom: 0;
 			}
+		}
+
+
+	}
+
+	.mb-tarif-block{
+		display: block;
+
+		.acc_section{
+			margin-bottom: .5rem;
+		}
+		.accordionjs .acc_section .acc_head{
+			text-transform: uppercase;
+			font-weight: 800;
+			display: flex;
+			align-items: center;
+			border-radius: 5px;
+		}
+		.accordionjs .acc_section .acc_content{
+			padding: 0;
+		}
+		.acc-icon{
+			width: 15px;
+			margin-left: auto;
+			display: block;
 		}
 	}
 
@@ -372,6 +439,8 @@
 			position: relative;
 			left: unset;
 			left: unset;
+			width: 100%;
+			max-width: 300px;
 			margin-right: auto;
 			margin-left: auto;
 			margin-bottom: 2rem;
@@ -388,6 +457,12 @@
 			display: none;
 		}
 		&__item{
+			max-width: 300px;
+			display: flex !important;
+			margin: 0 auto .5rem;
+			&:last-child{
+				margin-bottom: 0;
+			}
 			&-img{
 				height: auto;
 			}

@@ -364,14 +364,34 @@ ul{
 	}
 }
 
+.fancybox-slide--html .fancybox-close-small{
+	top: -8px;
+	right: 15px;
+}
+
 .default-form{
-	padding: 2rem 1rem;
+	padding: 2rem 2rem 1rem 1rem;
 	max-width: 	380px;
 	position: relative;
 	background-image: url('../img/laser-min.png');
 	background-repeat: repeat-y;
 	background-size: contain;
 	background-position: center right;
+	&:before{
+		content: '';
+		position: absolute;
+		display: block;
+		height: 100%;
+		width: 20px;
+		background-image: url('../img/ruler-min.png');
+		background-position: center right;
+		background-size: contain;
+		background-repeat: repeat-y;
+		right: 5px;
+		top: 0;
+		z-index: 1;
+		bottom: 0;
+	}
 	&__label{
 		position: relative;
 		margin-bottom: 1rem;
@@ -388,6 +408,7 @@ ul{
 		height: 177px;
     bottom: -29px;
     right: -17px;
+    z-index: 2;
 	}
 	&__circle{
 		top: 0;
@@ -416,6 +437,8 @@ ul{
 		margin-top: 1.5rem;
 	}
 	&__inner{
+		z-index: 5;
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		margin-top: 2rem;
@@ -622,6 +645,10 @@ ul{
 			justify-content: flex-start;
 		}
 	}
+}
+
+.mb-tarif-block{
+	display: none;
 }
 
 
@@ -1061,7 +1088,7 @@ ul{
   animation: upDown .7s linear 2s infinite alternate;
 	position: fixed;
 	right: 30px;
-	bottom: 30px;
+	bottom: 60px;
 	border-radius: 100%;
 	background: $accent;
 	color: #fff;

@@ -544,14 +544,35 @@ ul {
   margin-right: 15px;
 }
 
+.fancybox-slide--html .fancybox-close-small {
+  top: -8px;
+  right: 15px;
+}
+
 .default-form {
-  padding: 2rem 1rem;
+  padding: 2rem 2rem 1rem 1rem;
   max-width: 380px;
   position: relative;
   background-image: url("../img/laser-min.png");
   background-repeat: repeat-y;
   background-size: contain;
   background-position: center right;
+}
+
+.default-form:before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 20px;
+  background-image: url("../img/ruler-min.png");
+  background-position: center right;
+  background-size: contain;
+  background-repeat: repeat-y;
+  right: 5px;
+  top: 0;
+  z-index: 1;
+  bottom: 0;
 }
 
 .default-form__label {
@@ -572,6 +593,7 @@ ul {
   height: 177px;
   bottom: -29px;
   right: -17px;
+  z-index: 2;
 }
 
 .default-form__circle {
@@ -608,6 +630,8 @@ ul {
 }
 
 .default-form__inner {
+  z-index: 5;
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -893,6 +917,10 @@ ul {
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.mb-tarif-block {
+  display: none;
 }
 
 .comparison-block {
@@ -1512,7 +1540,7 @@ ul {
           animation: upDown .7s linear 2s infinite alternate;
   position: fixed;
   right: 30px;
-  bottom: 30px;
+  bottom: 60px;
   border-radius: 100%;
   background: #ff0000;
   color: #fff;
@@ -1549,6 +1577,40 @@ ul {
   .line__phone .phone {
     font-size: 1rem;
   }
+  .line_mb .ds-menu {
+    display: block;
+    margin-bottom: 2rem;
+  }
+  .line_mb .ds-menu__item {
+    margin: 0 0 .5rem 0;
+  }
+  .line_mb .ds-menu__link {
+    font-size: 1rem;
+  }
+  .line_mb .line__logo {
+    width: 200px;
+    margin-bottom: 2rem;
+  }
+  .line_mb .line__social {
+    font-size: 3rem;
+  }
+  .line_mb .line__content {
+    padding: 2rem 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .ds-menu {
     display: none;
   }
@@ -1568,6 +1630,7 @@ ul {
   }
   .main {
     text-align: center;
+    min-height: auto;
   }
   .main__button {
     max-width: 100%;
@@ -1593,7 +1656,6 @@ ul {
     margin-right: auto;
     margin-left: auto;
     width: 100%;
-    background-color: transparent;
   }
   .order__card {
     border: none;
@@ -1602,24 +1664,25 @@ ul {
     padding: 1rem 5px;
   }
   .order__right {
-    padding-top: 3rem;
+    margin-top: 3rem;
+    padding: 10px;
+    border-radius: 5px;
     text-align: center;
+    background: #fff;
   }
   .order__title {
-    font-size: 1.4rem;
-    line-height: 1.6rem;
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+  .order__list-icon {
+    width: 15%;
+  }
+  .order__list-text {
+    width: 85%;
+    font-size: .8rem;
   }
   .order__list-item {
     margin-bottom: 2rem;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
@@ -1631,10 +1694,13 @@ ul {
   .section {
     padding: 3rem 0;
   }
+  .default-form {
+    max-width: 100%;
+  }
   .default-form__title {
     text-align: center;
-    font-size: 1.2rem;
-    line-height: 1.4rem;
+    font-size: 1rem;
+    line-height: 1.2rem;
   }
   .comparison-square {
     display: none;
@@ -1710,7 +1776,7 @@ ul {
     font-size: .8rem;
   }
   .footer__map {
-    height: 200px;
+    height: 400px;
     width: 100%;
     padding-top: 2rem;
     border: none;
@@ -1783,21 +1849,26 @@ ul {
     width: 50%;
   }
   .services__item {
-    width: 50%;
+    width: 100%;
     padding-right: 5px;
     padding-left: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .services__item-title {
-    font-size: .9rem;
-    min-height: 60px;
+    font-size: .8rem;
+    min-height: auto;
+    margin-bottom: .5rem;
+    text-shadow: 0 0 1px #fff;
   }
   .services__item-text {
-    min-height: 90px;
-    font-size: .8rem;
+    min-height: auto;
+    font-size: .7rem;
+    text-shadow: 0 0 1px #fff;
   }
   .services__item-button {
     padding: .5rem .1rem .3rem;
-    font-size: .8rem;
+    font-size: .6rem;
     max-width: 120px;
   }
   .services__item-video {
@@ -1815,6 +1886,7 @@ ul {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
     background-color: transparent;
+    display: none;
   }
   .ds-tarif-block__desc {
     display: none;
@@ -1833,12 +1905,7 @@ ul {
     width: 15px;
   }
   .ds-tarif-block__item:first-child {
-    height: auto;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    text-shadow: 0 0 2px #fff;
+    display: none;
   }
   .ds-tarif-block__item:nth-child(2):before {
     content: 'БЫСТРОЕ ПЛАНИРОВОЧНОЕ РЕШЕНИЕ';
@@ -1878,12 +1945,40 @@ ul {
     margin-bottom: 1rem;
     position: relative;
     border-radius: 5px;
+    color: #fff;
   }
   .ds-tarif-block__card:before {
     display: none;
   }
   .ds-tarif-block__card:last-child {
     margin-bottom: 0;
+  }
+  .mb-tarif-block {
+    display: block;
+  }
+  .mb-tarif-block .acc_section {
+    margin-bottom: .5rem;
+  }
+  .mb-tarif-block .accordionjs .acc_section .acc_head {
+    text-transform: uppercase;
+    font-weight: 800;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 5px;
+  }
+  .mb-tarif-block .accordionjs .acc_section .acc_content {
+    padding: 0;
+  }
+  .mb-tarif-block .acc-icon {
+    width: 15px;
+    margin-left: auto;
+    display: block;
   }
   .faq .accordionjs .acc_section .acc_head {
     font-size: .9rem;
@@ -1909,6 +2004,8 @@ ul {
     position: relative;
     left: unset;
     left: unset;
+    width: 100%;
+    max-width: 300px;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 2rem;
@@ -1920,6 +2017,17 @@ ul {
   }
   .founder-block_ds {
     display: none;
+  }
+  .founder-block__item {
+    max-width: 300px;
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    margin: 0 auto .5rem;
+  }
+  .founder-block__item:last-child {
+    margin-bottom: 0;
   }
   .founder-block__item-img {
     height: auto;

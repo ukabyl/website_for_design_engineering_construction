@@ -36,8 +36,8 @@ $(function() {
 	  draggable: false,
 	  swipe: false,
 	  touchMove: false,
-	  prevArrow: '<button class="arrow arrow-prev"><img src="../img/arrow-left-min.png" alt="Назад" /></button>',
-	  nextArrow: '<button class="arrow arrow-next"><img src="../img/arrow-right-min.png" alt="Вперёд" /></button>',
+	  prevArrow: '<button class="arrow arrow-prev"><img src="img/arrow-left-min.png" alt="Назад" /></button>',
+	  nextArrow: '<button class="arrow arrow-next"><img src="img/arrow-right-min.png" alt="Вперёд" /></button>',
 	  responsive: [
 	    {
 	      breakpoint: 992,
@@ -60,12 +60,12 @@ $(function() {
   });
  	// *********************************** Accordion
 	
-	// *********************************** Founder MB SLIDER
- 	$('.founder-block_mb').slick({
- 		arrows: false,
- 		autoplay: 1000
- 	});
- 	// *********************************** Founder MB SLIDER
+	// // *********************************** Founder MB SLIDER
+ // 	$('.founder-block_mb').slick({
+ // 		arrows: false,
+ // 		autoplay: 1000
+ // 	});
+ // 	// *********************************** Founder MB SLIDER
 
  	// ********** Comment slider
     let coworker = $('.comment-cards');
@@ -95,6 +95,10 @@ $(function() {
 	$('.helper__close').click(function() {
 		$('.helper').removeClass('active');
 	})
+
+  $('.helper__button').click(function() {
+    $('.helper').removeClass('active');
+  });
 	// ***************************************** Manager & Helper
 
 	// *****************************************Anchor & Close mmenu
