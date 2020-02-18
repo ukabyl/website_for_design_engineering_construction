@@ -1539,8 +1539,8 @@ ul {
   -webkit-animation: upDown .7s linear 2s infinite alternate;
           animation: upDown .7s linear 2s infinite alternate;
   position: fixed;
-  right: 30px;
-  bottom: 60px;
+  right: 25px;
+  bottom: 50px;
   border-radius: 100%;
   background: #ff0000;
   color: #fff;
