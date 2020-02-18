@@ -1593,6 +1593,7 @@ ul {
   }
   .line_mb .line__social {
     font-size: 3rem;
+    line-height: 2.2rem;
   }
   .line_mb .line__content {
     padding: 2rem 0;
