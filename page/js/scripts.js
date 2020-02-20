@@ -121,3 +121,171 @@ $(function() {
     // *****************************************Fancybox settings
 
 });
+
+
+const vm = new Vue({
+  el: '#test',
+  data: {
+    step: 1,
+    object: {
+      name: '',
+      img: ''
+    },
+    objectOther: '',
+    objectAndObjectOtherSwitcher: false,
+    style: {
+      name: '',
+      img: ''
+    },
+    styleOther: '',
+    styleAndObjectOtherSwitcher: false,
+    square: '',
+    what: '',
+    additional: [],
+    deadline: '',
+    contactWith: '',
+    name: '',
+    phone: '',
+    email: ''
+  },
+  methods: {
+    nextStep: function() {
+
+      var vm = this;
+
+      switch(vm.step) {
+        case 1:
+          if ( vm.object.name !== '' || vm.objectOther !== '' ) {
+            vm.step = 2;
+          } else {
+            vm.errorMessage();
+          }
+          break;
+        case 2:
+          if ( vm.square !== '' ) {
+            vm.step = 3;
+          } else {
+            vm.errorMessage();
+          }
+          break;
+        case 3:
+          if ( vm.style.name !== '' || vm.styleOther !== '' ) {
+            vm.step = 4;
+          } else {
+            vm.errorMessage();
+          }
+          break;
+        case 4:
+          if ( vm.what !== '' ) {
+            vm.step = 5;
+          } else {
+            vm.errorMessage();
+          }
+          break;
+        case 5:
+          if ( vm.additional.length !== 0 ) {
+            vm.step = 6;
+          } else {
+            vm.errorMessage();
+          }
+          break;
+        case 6:
+        if ( vm.deadline !== '' ) {
+          vm.step = 7;
+        } else {
+          vm.errorMessage();
+        }
+        break;
+        case 7:
+          if ( vm.contactWith !== '' ) {
+            vm.step = 8;
+          } else {
+            vm.errorMessage();
+          }
+          break;
+        case 8:
+          if ( vm.name !== '' && vm.phone !== '' ) {
+
+            var templ = this.object.name;
+            
+            let $data = 'name=' + this.name + '&site_type=3&' + '&email=' + this.email + '&phone=' + this.phone + '&message=';
+            $data += `<table class="table table-bordered 
+            table-striped">
+              <tr><td>Объект</td><td>${this.objectOther == '' ? templ : this.objectOther}</td></tr></tr>
+              <tr><td>Стиль дизайна</td><td>${this.styleOther == '' ? templ : this.styleOther}</td></tr>
+              <tr><td>Что необходимо</td><td>${this.what}</td></tr>
+              <tr><td>Дополнительные функции</td><td>${this.additional}</td></tr>
+              <tr><td>Когда нужен готовый дизайн проект</td><td>${this.deadline}</td></tr>
+              <tr><td>Как Вам будет удобно получить информацию от нас?</td><td>${this.contactWith}</td></tr>
+            </table>`;
+
+            console.log($data);
+
+            $.fancybox.close();
+          } else {
+            vm.errorMessage();
+          }
+          break;
+      }
+
+    },
+    errorMessage: function() {
+      var vm = this;
+      vm.$refs.errorMessage.classList.add('active');
+      setTimeout(function() {
+        vm.$refs.errorMessage.classList.remove('active');
+      }, 2000)
+    }
+  },
+  watch: {
+    objectAndObjectOtherSwitcher: function(val) {
+      if ( val === false ) {
+        this.object.name = '';
+        this.object.img = '';
+      }
+    },
+    objectOther: function(val) {
+      if ( val !== '' ) {
+        this.objectAndObjectOtherSwitcher = false;
+      }
+    },
+    'object': {
+      handler: function(val, oldVal) {
+        if ( val.name !== '' ) {
+          this.objectAndObjectOtherSwitcher = true;
+          this.objectOther = '';
+        }
+      },
+      deep: true
+    },
+    styleAndObjectOtherSwitcher: function(val) {
+      if ( val === false ) {
+        this.style.name = '';
+        this.style.img = '';
+      }
+    },
+    styleOther: function(val) {
+      if ( val !== '' ) {
+        this.style.AndObjectOtherSwitcher = false;
+      }
+    },
+    'style': {
+      handler: function(val, oldVal) {
+        if ( val.name !== '' ) {
+          this.styleAndObjectOtherSwitcher = true;
+          this.styleOther = '';
+        }
+      },
+      deep: true
+    }
+  },
+  mounted() {
+    var vm = this;
+
+    $('.tel-maskvue').mask("+7(999) 999-9999", {
+      completed: function() {
+        vm.phone = $( this ).val();
+      }
+    });
+  }
+})

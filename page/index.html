@@ -22,14 +22,12 @@
 	<meta name="theme-color" content="#826a45">
 	<!-- Custom Browsers Color End -->
 
-
+	<script src="libs/vue/vue.min.js"></script>
 	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="libs/slick/slick/slick.css">
 	<link rel="stylesheet" href="libs/fancybox/dist/jquery.fancybox.css">
 	<link rel="stylesheet" href="libs/hamburgers/dist/hamburgers.min.css">
 	<link rel="stylesheet" href="libs/accordion/accordion.css">
-	<link rel="stylesheet" href="libs/iziModal/css/iziModal.min.css">
-	<link rel="stylesheet" href="libs/aos/aos.css">
 	<link rel="stylesheet" href="libs/beforeafter/BeerSlider.css">
 	<link rel="stylesheet" href="icons/style.css">
 
@@ -110,7 +108,7 @@
 					<h1 class="main__title">Современный дизайн интерьера жилых и коммерческих помещений от идеи до реализации</h1>
 					<h2 class="main__title-second">Комплексное решение от концепции до ремонта "под ключ" с комплектацией мебелью и подбором материалов</h2>
 					<button class="main__button button"
-						data-fancybox data-src="#modal-form" href="javascript:;"
+						data-fancybox data-src="#test-form" href="javascript:;"
 					>
 						Пройти тест и получить бесплатную консультацию
 					</button>
@@ -234,6 +232,7 @@
 	<!-- tarif -->
 	<section id="tarif" class="tarif section" style="background-image: url('img/tarif-bg-min.png');">
 		<div class="container">
+			<h2 class="tarif__title d-block d-lg-none">Тарифы</h2>
 			<div class="ds-tarif-block">
 				<div class="ds-tarif-block__desc">
 					<div class="ds-tarif-block__item ds-tarif-block__desc-item">
@@ -683,7 +682,7 @@
 							<img src="img/maria-min.png" alt="logo">
 						</div>
 						<div class="founder-block__item-title">
-							<span>Бухгалтерия</span>
+							<span></span>
 							<b>МАРИЯ ОВЧАРЕНКО</b>
 						</div>
 					</div>
@@ -692,7 +691,7 @@
 							<img src="img/sergey-min.png" alt="logo">
 						</div>
 						<div class="founder-block__item-title">
-							<span>Тот кто на самом деле работает:</span>
+							<span></span>
 							<b>СЕРГЕЙ ПОВЕТЬЕВ</b>
 						</div>
 					</div>
@@ -722,7 +721,7 @@
 						<img src="img/sergey-min.png" alt="logo">
 					</div>
 					<div class="founder-block__item-title">
-						<span>Тот кто на самом деле работает:</span>
+						<span></span>
 						<b>СЕРГЕЙ ПОВЕТЬЕВ</b>
 					</div>
 				</div>
@@ -731,7 +730,7 @@
 						<img src="img/maria-min.png" alt="logo">
 					</div>
 					<div class="founder-block__item-title">
-						<span>Бухгалтерия</span>
+						<span></span>
 						<b>МАРИЯ ОВЧАРЕНКО</b>
 					</div>
 				</div>
@@ -766,11 +765,11 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-12 col-xl-8">
+				<!-- 	<div class="col-12 col-xl-8">
 						<div class="footer__map">
 							<a class="dg-widget-link" href="http://2gis.kz/shymkent/firm/70000001026458935/center/69.61761474609376,42.324602922069126/zoom/15?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Шымкента</a><div class="dg-widget-link"><a href="http://2gis.kz/shymkent/firm/70000001026458935/photos/70000001026458935/center/69.61761474609376,42.324602922069126/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos">Фотографии компании</a></div><div class="dg-widget-link"><a href="http://2gis.kz/shymkent/center/69.617565,42.324094/zoom/15/routeTab/rsType/bus/to/69.617565,42.324094╎Астана Энерго Ресурс, магазин?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до Астана Энерго Ресурс, магазин</a></div><script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script><script charset="utf-8">new DGWidgetLoader({"width":100+'%',"height":100+'%',"borderColor":"#a3a3a3","pos":{"lat":42.324602922069126,"lon":69.61761474609376,"zoom":15},"opt":{"city":"shymkent"},"org":[{"id":"70000001026458935"}]});</script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -858,7 +857,7 @@
 	<div style="display: none;" class="modal-form" data-auto-focus="false" id="modal-form">
 		<div class="default-form modal-form__default-form">
 			<b class="default-form__title order__title">
-				Пройдите тест и получите расчёт стоимости вашего проекта
+				Оставьте заявку!
 			</b>
 			<form class="default-form__inner">
 				<label for="" class="default-form__label">
@@ -878,6 +877,250 @@
 				</label>
 				<button type="submit" class="default-form__button button"  data-fancybox data-src="#modal-form" href="javascript:;">Оставить заявку</button>
 			</form>
+		</div>
+	</div>
+	<!-- modal form -->
+
+	<!-- modal form -->
+	<div style="display: none;" class="test-form" data-auto-focus="false" id="test-form">
+		<div id="test">
+			<div class="test">
+				<div v-if="step === 1" class="test__question test-question">
+					<div class="test-question__title">
+						Выберите свой объект
+					</div>
+					<div class="test-question__item">
+						<div class="test-question__left">
+							<label class="test-question__label">
+								<input type="radio" class="test-question__radio test-question__check-item" value="Квартира" v-model="object.name" @change="object.img='img/flat.jpg'"> 
+								<span class="check"></span>Квартира
+							</label>
+							<label class="test-question__label">
+								<input type="radio" class="test-question__radio test-question__check-item" value="Дом" v-model="object.name" @change="object.img='img/houseQuiz.jpg'">
+								<span class="check"></span> Дом
+							</label>
+							<label class="test-question__label">
+								<input type="radio" class="test-question__radio test-question__check-item" value="Офис" v-model="object.name" @change="object.img='img/officeQuiz.jpg'">
+								<span class="check"></span> Офис
+							</label>
+							<label class="test-question__label">
+								<input type="radio" class="test-question__radio test-question__check-item" value="Коммерческая недвижимость" v-model="object.name" @change="object.img='img/commersionRoom.jpg'">
+								<span class="check"></span> Коммерческая недвижимость
+							</label>
+							<label class="test-question__label">
+								<span class="check" :class="{'active': objectAndObjectOtherSwitcher === false}"></span>
+								<input type="text" class="test-question__input" v-model="objectOther" placeholder="	Другое"> 
+							</label>
+						</div>
+						<div class="test-question__right">
+							<img v-if="objectAndObjectOtherSwitcher === true" class="test-question__img" :src="object.img" alt="Выберите объект">
+							<p v-else-if="objectOther !== ''" class="test-question__right-text">{{ objectOther }}</p>
+							<p v-else class="test-question__right-text">Выберите объект</p>
+						</div>
+					</div>
+				</div>
+				<div v-show="step === 2" class="test__question test-question">
+					<div class="test-question__title">
+						Укажите примерную площадь помещения в м2
+					</div>
+					<div class="test-question__item">
+						<div class="test-question__left">
+							<label class="test-question__label">
+								<input type="text" class="test-question__input" v-model="square" placeholder="Например: 85 м2"> 
+							</label>
+						</div>
+					</div>
+				</div>
+				<div v-show="step === 3" class="test__question test-question">
+					<div class="test__title">
+						Цена и сроки зависят от типа Вашего объекта, площади и необходимых услуг
+					</div>
+					<div class="test-question__title">
+						Какой стиль дизайна Вы предпочитаете?
+					</div>
+					<div class="test-question__item">
+						<div class="test-question__left">
+							<label class="test-question__label">
+								<input type="radio" class="test-question__radio test-question__check-item" value="Минимализм / Современный" v-model="style.name" @change="style.img='img/style1.jpg'"> 
+								<span class="check"></span>Минимализм / Современный   
+							</label>
+							<label class="test-question__label">
+								<input type="radio" class="test-question__radio test-question__check-item" value="Неоклассика" v-model="style.name" @change="style.img='img/style2.jpg'">
+								<span class="check"></span> Неоклассика 
+							</label>
+							<label class="test-question__label">
+								<input type="radio" class="test-question__radio test-question__check-item" value="Лофт / Скандинавский" v-model="style.name" @change="style.img='img/style3.jpg'">
+								<span class="check"></span> Лофт / Скандинавский 
+							</label>
+							<label class="test-question__label">
+								<input type="radio" class="test-question__radio test-question__check-item" value="Классика" v-model="style.name" @change="style.img='img/style4.jpg'">
+								<span class="check"></span> Классика
+							</label>
+							<label class="test-question__label">
+								<input type="radio" class="test-question__radio test-question__check-item" value="Арт Деко" v-model="style.name" @change="style.img='img/style5.jpg'">
+								<span class="check"></span> Арт Деко
+							</label>
+							<label class="test-question__label">
+								<input type="radio" class="test-question__radio test-question__check-item" value="Другой / смешанный стиль" v-model="style.name" @change="style.img='img/style6.jpg'">
+								<span class="check"></span> Другой / смешанный стиль
+							</label>
+							<label class="test-question__label">
+								<span class="check" :class="{'active': styleAndObjectOtherSwitcher === false}"></span>
+								<input type="text" class="test-question__input" v-model="styleOther" placeholder="	Другое"> 
+							</label>
+						</div>
+						<div class="test-question__right">
+							<img v-if="styleAndObjectOtherSwitcher === true" class="test-question__img" :src="style.img" alt="Выберите объект">
+							<p v-else-if="styleOther !== ''" class="test-question__right-text">{{ styleOther }}</p>
+							<p v-else class="test-question__right-text">Выберите объект</p>
+						</div>
+					</div>
+				</div>
+				<div v-show="step === 4" class="test__question test-question">
+					<div class="test__title">
+						Цена и сроки зависят от типа Вашего объекта, площади и необходимых услуг
+					</div>
+					<div class="test-question__title">
+						Вам необходим только дизайн-проект или услуги наших строителей тоже?
+					</div>
+					<div class="test-question__item">
+						<div class="test-question__left">
+							<div class="test-question__inner">
+								<label class="test-question__label">
+									<input type="radio" class="test-question__radio test-question__check-item" value="Только дизайн-проект" v-model="what"> 
+									<span class="check"></span>Только дизайн-проект    
+								</label>
+								<label class="test-question__label">
+									<input type="radio" class="test-question__radio test-question__check-item" value="Мы ищем одну компанию Дизайнеры + Строители  " v-model="what"> 
+									<span class="check"></span>Мы ищем одну компанию Дизайнеры + Строители  
+								</label>
+								<label class="test-question__label">
+									<input type="radio" class="test-question__radio test-question__check-item" value="Точно не знаю " v-model="what"> 
+									<span class="check"></span>Точно не знаю  
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div v-show="step === 5" class="test__question test-question">
+					<div class="test-question__title">
+						Какие доп. опции вам интересны? Можете выбрать несколько пунктов
+					</div>
+					<div class="test-question__item">
+						<div class="test-question__left">
+							<div class="test-question__inner">
+								<label class="test-question__label">
+									<input type="checkbox" class="test-question__radio test-question__check-item" value="Изготовление мебели и дверей под заказ" v-model="additional"> 
+									<span class="check-checkbox"><i class="icon-confirm"></i></span>Изготовление мебели и дверей под заказ     
+								</label>
+								<label class="test-question__label">
+									<input type="checkbox" class="test-question__radio test-question__check-item" value="Заказ мебели и оборудования из-за рубежа" v-model="additional"> 
+									<span class="check-checkbox"><i class="icon-confirm"></i></span>Заказ мебели и оборудования из-за рубежа 
+								</label>
+								<label class="test-question__label">
+									<input type="checkbox" class="test-question__radio test-question__check-item" value="Изделия из стекла (зеркала, душ. кабины, витражи, стеклянные перегородки)" v-model="additional"> 
+									<span class="check-checkbox"><i class="icon-confirm"></i></span>Изделия из стекла (зеркала, душ. кабины, витражи, стеклянные перегородки)   
+								</label>
+								<label class="test-question__label">
+									<input type="checkbox" class="test-question__radio test-question__check-item" value="3D-тур по будущему дизайну" v-model="additional"> 
+									<span class="check-checkbox"><i class="icon-confirm"></i></span>3D-тур по будущему дизайну  
+								</label>
+								<label class="test-question__label">
+									<input type="checkbox" class="test-question__radio test-question__check-item" value="Полная закупка и доставка отделочных материалов" v-model="additional"> 
+									<span class="check-checkbox"><i class="icon-confirm"></i></span>Полная закупка и доставка отделочных материалов   
+								</label>
+								<label class="test-question__label">
+									<input type="checkbox" class="test-question__radio test-question__check-item" value="Доп. услуги не нужны" v-model="additional"> 
+									<span class="check-checkbox"><i class="icon-confirm"></i></span>Доп. услуги не нужны   
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div v-show="step === 6" class="test__question test-question">
+					<div class="test-question__title">
+						Когда нужен готовый дизайн проект?
+					</div>
+					<div class="test-question__item">
+						<div class="test-question__left">
+							<div class="test-question__inner">
+								<label class="test-question__label">
+									<input type="radio" class="test-question__radio test-question__check-item" value="В ближайший месяц " v-model="deadline"> 
+									<span class="check"></span>В ближайший месяц    
+								</label>
+								<label class="test-question__label">
+									<input type="radio" class="test-question__radio test-question__check-item" value="В ближайшие 3 месяца " v-model="deadline"> 
+									<span class="check"></span>В ближайшие 3 месяца 
+								</label>
+								<label class="test-question__label">
+									<input type="radio" class="test-question__radio test-question__check-item" value="В ближайшие пол года  " v-model="deadline"> 
+									<span class="check"></span>В ближайшие пол года  
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div v-show="step === 7" class="test__question test-question">
+					<div class="test-question__title">
+						Как Вам будет удобно получить информацию от нас? 
+					</div>
+					<div class="test-question__item">
+						<div class="test-question__left">
+							<div class="test-question__inner">
+								<label class="test-question__label">
+									<input type="radio" class="test-question__radio test-question__check-item" value="Встретиться на вашем объекте с дизайнером " v-model="contactWith"> 
+									<span class="check"></span>Встретиться на вашем объекте с дизайнером   
+								</label>
+								<label class="test-question__label">
+									<input type="radio" class="test-question__radio test-question__check-item" value="Приехать в наш офис (г. Шымкент, ул. Акпан Батыра 111) " v-model="contactWith"> 
+									<span class="check"></span>Приехать в наш офис (г. Шымкент, ул. Акпан Батыра 111)  
+								</label>
+								<label class="test-question__label">
+									<input type="radio" class="test-question__radio test-question__check-item" value="Позвонить Вам и дать консультацию   " v-model="contactWith"> 
+									<span class="check"></span>Позвонить Вам и дать консультацию 
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div v-show="step === 8" class="test__question test-question">
+					<div class="test-question__finish-title">
+						Отлично! Последний шаг!
+					</div>
+					<div class="test-question__finish-text">
+						Почти готово! Куда направить Ваш персональный расчёт?
+					</div>
+					<div class="default-form test__default-form">
+						<form class="default-form__inner">
+							<label for="" class="default-form__label">
+								<div class="default-form__label-title">Ваше имя:</div>
+								<input type="text" v-model="name" class="default-form__input">
+								<span class="default-form__label-icon icon-user"></span>
+							</label>
+							<label for="" class="default-form__label">
+								<div class="default-form__label-title">Телефон:</div>
+								<input type="tel" v-model="phone" class="default-form__input tel-maskvue">
+								<span class="default-form__label-icon icon-phone"></span>
+							</label>
+							<label for="" class="default-form__label">
+								<div class="default-form__label-title">Email:</div>
+								<input type="text" v-model="email" class="default-form__input">
+								<span class="default-form__label-icon icon-envelope"></span>
+							</label>
+						</form>
+					</div>
+				</div>
+				<div class="test__bottom">
+					<div class="test__bottom-error" ref="errorMessage">Заполните все поля!</div>
+					<button @click="step--" class="test__back test__arrow">
+						<svg style="transform: rotate(180deg);" data-v-f63d6478="" fill="#fff" x="0px" y="0px" viewBox="0 0 31.49 31.49" xml:space="preserve" class="is-back"><path data-v-f63d6478="" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path></svg>
+					</button>
+					<button @click="nextStep" class="test__next test__arrow">
+						<span>Вперед</span>
+						<svg data-v-f63d6478="" fill="#fff" x="0px" y="0px" viewBox="0 0 31.49 31.49" xml:space="preserve" class=""><path data-v-f63d6478="" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path></svg>
+					</button>
+				</div>
+			</div>
 		</div>
 	</div>
 	<!-- modal form -->
@@ -931,9 +1174,7 @@
 	<script src="libs/fancybox/dist/jquery.fancybox.js"></script>
 	<script src="libs/accordion/accordion.min.js"></script>
 	<script src="libs/simpler-sidebar/src/simpler-sidebar.js"></script>
-	<script src="libs/iziModal/js/iziModal.min.js"></script>
 	<script src="libs/maskinput/maskinput.js"></script>
-	<script src="libs/aos/aos.js"></script>
 	<script src="js/scripts.js"></script>
 
 </body>
