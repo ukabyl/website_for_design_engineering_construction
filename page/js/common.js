@@ -68,24 +68,40 @@ $(function() {
  // 	// *********************************** Founder MB SLIDER
 
  	// ********** Comment slider
-    let coworker = $('.comment-cards');
-    let coworkerSettings = {
-        slidesToShow: 1,
-        infinite: false,
+    // let coworker = $('.comment-cards');
+    // let coworkerSettings = {
+    //     slidesToShow: 1,
+    //     infinite: false,
+    //     arrows: false,
+    //     autoplay: 2000,
+    // };
+    // $(window).on('resize load', function(){
+    //     if($(window).width() > 992){
+    //         if(coworker.hasClass('slick-initialized')){
+    //             coworker.slick('unslick')
+    //         }
+    //         return 0;
+    //     }
+    //     if(!coworker.hasClass('slick-initialized')){
+    //         return coworker.slick(coworkerSettings)
+    //     }
+    // });
+    $('.comment-cards').slick({
+        slidesToShow: 3,
+        infinite: true,
         arrows: false,
-        autoplay: 2000,
-    };
-    $(window).on('resize load', function(){
-        if($(window).width() > 992){
-            if(coworker.hasClass('slick-initialized')){
-                coworker.slick('unslick')
+        autoplay: 4000,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              autoplay: 2000,
             }
-            return 0;
-        }
-        if(!coworker.hasClass('slick-initialized')){
-            return coworker.slick(coworkerSettings)
-        }
-    });
+          }
+        ]
+
+    })
   // ********** Comment slider
 
   // ***************************************** Manager & Helper
@@ -123,7 +139,7 @@ $(function() {
 });
 
 
-const vm = new Vue({
+new Vue({
   el: '#test',
   data: {
     step: 1,

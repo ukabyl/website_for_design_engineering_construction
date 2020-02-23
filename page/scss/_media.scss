@@ -279,7 +279,6 @@
 				text-shadow: 0 0 1px #fff;
 			}
 			&-text{
-				min-height: auto;
 				font-size: .7rem;
 				text-shadow: 0 0 1px #fff;
 			}
@@ -532,6 +531,11 @@
 }
 
 @media screen and (max-width: 395px) {
+	.comment-cards{
+		.slick-slide{
+			padding: 0;
+		}
+	}
 	.comparison-slider{
 
 		&__item{

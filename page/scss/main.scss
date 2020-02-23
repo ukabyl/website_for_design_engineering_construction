@@ -262,11 +262,13 @@ ul{
 		font-weight: 800;
 		font-size: 2rem;
 		text-shadow: 0  0 2px #000;
+		margin-bottom: 1rem;
 		&:hover{
 			text-shadow: 1px 1px 1px #000;
 		}
 		&-second{
 			font-weight: 500;
+			margin-bottom: 1rem;
 			font-size: 1.5rem;
 			text-shadow: 0 0 2px #000;
 		}
@@ -455,6 +457,8 @@ ul{
 .services{
 	display: flex;
 	flex-wrap: wrap;
+	justify-content:center;
+	background: $text;
 	&__item{
 		position: relative;
 		@include bgSettings;
@@ -476,13 +480,12 @@ ul{
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: space-between;
 		&-title{
-			margin-bottom: 1rem;
 			display: block;
 			position: relative;
 			z-index: 5;
-			min-height: 30px;
+			margin-bottom: .5rem;
 		}
 		&-text{
 			margin-bottom: 1rem;
@@ -490,7 +493,6 @@ ul{
 			position: relative;
 			z-index: 5;
 			font-size: .9rem;
-			min-height: 70px;
 			display: flex;
 			align-items: center;
 		}
@@ -741,6 +743,8 @@ ul{
 .gallery{
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
+	background-color: $text;
 	&__img{
 		width: calc(100%/3);
 		position: relative;
@@ -799,8 +803,9 @@ ul{
 }
 
 .comment-cards{
-	display: flex;
-	justify-content: space-between;
+	.slick-slide{
+		padding: 0 .5rem;
+	}
 	&__item{
 		width: 32.5%;
 		border: 2px solid $text;
@@ -1135,6 +1140,8 @@ ul{
 		padding: 0 10px 2rem;
 		background-image: none;
 		text-align: center;
+		margin-right: auto;
+		margin-left: auto;
 		.default-form__label{
 			width: max-content;
 			margin-right: auto;
@@ -1456,6 +1463,25 @@ ul{
 		padding-right: 50px;
 	}
 
+}
+
+.modal-success{
+	text-align: center;
+	background-color: $text;
+	color: #fff;
+	text-shadow: 0 0 1px #fff;
+	&__block{
+
+	}
+	&__title{
+		font-weight: 600;
+		font-size: 1.2rem;
+		margin-bottom: 	10px;
+		&-title{
+			font-weight: 	600;
+			font-size: 	1rem;
+		}
+	}
 }
 
 @import 'media';
